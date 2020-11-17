@@ -1,0 +1,13 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  button {
+    max-width: 200px;
+  }
+  p {
+    color: red;
+  }
+  p.is-playing {
+    color: green;
+  }
+}

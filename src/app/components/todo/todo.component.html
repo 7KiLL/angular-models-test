@@ -1,0 +1,5 @@
+<div class="todo">
+  <button (click)="pause()" *ngIf="isPlaying">Pause</button>
+  <button (click)="play()" *ngIf="!isPlaying">Play</button>
+  <p [class.is-playing]="isPlaying">{{isPlaying}}</p>
+</div>

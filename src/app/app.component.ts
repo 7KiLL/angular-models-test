@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {TodoService} from "./services/todo.service";
-import {tap} from "rxjs/operators";
-import {Todo} from "./models/todo.model";
 
 
 @Component({
@@ -11,10 +9,7 @@ import {Todo} from "./models/todo.model";
 })
 export class AppComponent implements OnInit {
     title = 'todo-models';
-    public todos$ = this.todoService.getTodos()
-        .pipe(
-            tap(todos => console.log(todos))
-        );
+    public todos$ = this.todoService.getTodos();
     constructor(private todoService: TodoService) {
     }
 
